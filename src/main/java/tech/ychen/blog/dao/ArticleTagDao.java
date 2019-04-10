@@ -30,6 +30,12 @@ public interface ArticleTagDao {
     List<ArticleTag> selectAllByArticleId(Integer articleId);
 
 
+
+    @Select("SELECT * FROM `article_tag` WHERE(`tag_id` = #{tagId})")
+    List<ArticleTag> selectAllbyTagId(Integer tagId);
+
+
+
    // @Delete("DELETE * FROM `article_tag` WHERE(`article_id`= #{articleId})")  //ssss
     @DeleteProvider(type = ArticleTagProvider.class,method ="deletebyArticleId" )
     int deleteByArticleId(Integer id);

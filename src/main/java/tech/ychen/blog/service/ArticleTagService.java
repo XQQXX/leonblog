@@ -10,5 +10,9 @@ public interface ArticleTagService {
 
     List<ArticleTag> listByArticleId(Integer articleId);
 
+    List<ArticleTag> listByTagId(Integer tagId);
+
     int deleteByArticleId(Integer articleId);
+
+
 }

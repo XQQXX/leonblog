@@ -38,6 +38,16 @@ public class ArticleTagServiceImpl implements ArticleTagService {
         return articleTagDao.selectAllByArticleId(articleId);
     }
 
+    /**
+     * 根据tagid 列出所有的 article tag 记录
+     * @param tagId
+     * @return
+     */
+    @Override
+    public List<ArticleTag> listByTagId(Integer tagId) {
+        return articleTagDao.selectAllbyTagId(tagId);
+    }
+
     @Override
     public int deleteByArticleId(Integer articleId) {
         return articleTagDao.deleteByArticleId(articleId);
